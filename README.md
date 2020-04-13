@@ -149,6 +149,67 @@ _**Catatan:**_
 
 ✅ Commit & push source code jawaban soal ini ke __Github__ Anda, buatlah repo dengan nama __Ujian_DilanMilea__, kemudian lampirkan __url link repo Github__ Anda via email ke _lintang@purwadhika.com!_
 
+🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸🔸
+
+# Remedial Ujian Python Data Science Fundamental
+
+### **Soal - 💳 Kode Seri NPWP**
+
+__NPWP__ (Nomor Pokok Wajib Pajak) memiliki kode seri dengan __15 angka__, yang menggunakan format sebagai berikut: __99.999.999.9-999.999__.
+
+- Dua digit pertama, __(99)__.xxx.xxx.x-xxx.xxx menunjukkan Identitas Wajib Pajak, yaitu:
+    - __01__ sampai __03__ adalah Wajib Pajak Badan
+    - __04__ dan __06__ adalah Wajib Pajak Pengusaha
+    - __05__ adalah Wajib Pajak Karyawan
+    - __07__ sampai __09__ adalah Wajib Pajak Orang Pribadi
+
+- Enam digit berikutnya, xx.__(999.999)__.x-xxx.xxx menunjukkan Nomor Registrasi / Urut yang diberikan Kantor Pusat Direktorat Jenderal Pajak kepada Kantor Pelayanan Pajak (KPP).
+
+- Satu digit berikutnya, xx.xxx.xxx.__(9)__-xxx.xxx berfungsi sebagai Alat Pengaman untuk menghindari terjadinya pemalsuan atau kesalahan pada NPWP.
+
+- Tiga digit berikutnya, xx.xx.xxx.x-__(999)__.xxx adalah Kode KPP. Jika misalkan kodenya adalah 015, berarti NPWP tersebut dikeluarkan di KPP berkode 015, yaitu KPP Pratama Jakarta Tebet.
+
+- Tiga digit terakhir, xx.xxx.xxx.x-xxx.__(999)__ menunjukkan Status Wajib Pajak:
+    - __000__ berarti berstatus Tunggal / Pusat (biasa disebut NPWP Pusat)
+    - __00x__ (001,002 dst) berarti Cabang, dimana angka akhir menunjukkan urutan cabang (cabang ke-1 maka 001; cabang ke-2 maka 002; dst.).
+
+<hr>
+
+Berdasarkan uraian di atas, buatlah sebuah file python (_.py_) yang berisi sebuah function untuk melakukan validasi kode seri NPWP & menguraikan artinya. Adapun eksekusi function beserta output yang diharapkan adalah sebagai berikut.
+
+- ```cekNPWP(99.999.999.9-999.999)```
+    ```
+    Output: Kode seri NPWP tidak valid!
+    ```
+    Kode seri NPWP ini tidak valid dikarenakan 2 digit pertama hanya bisa diisi __01__ sampai __09__.
+
+- ```cekNPWP(091234560123123)```
+    ```
+    Output: Kode seri NPWP tidak valid!
+    ```
+    Kode seri NPWP ini tidak valid dikarenakan tidak mengikuti format baku: __99.999.999.9-999.999__.
+
+- ```cekNPWP(09.123.456.A-123.123)```
+    ```
+    Output: Kode seri NPWP tidak valid!
+    ```
+    Kode seri NPWP ini tidak valid dikarenakan terdapat karakter bukan angka di dalamnya.
+
+- ```cekNPWP(02.123.456.0-212.191)```
+    ```
+    Output: Kode seri NPWP valid!
+            Identitas Wajib Pajak: 02 Wajib Pajak Badan
+            Nomor Registrasi: 123.456
+            Alat Pengaman: 0
+            Kode KPP: 212
+            Status Wajib Pajak: 191
+    ```
+    Kode seri NPWP ini valid, maka function akan menjabarkan arti angka pada kode seri tersebut.
+
+_**Catatan:**_ 
+
+✅ Commit & push source code jawaban soal ini ke __Github__ Anda, buatlah repo dengan nama __Remedial_NPWP__, kemudian lampirkan __url link repo Github__ Anda via email ke _lintang@purwadhika.com!_
+
 <hr>
 
 ### *__#HappyCoding__* :relaxed:
